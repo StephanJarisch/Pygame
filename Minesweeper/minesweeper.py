@@ -50,25 +50,25 @@ class minesweeperGame():
         self.end_lost = False
         self.first_move = True
 
-        icon = pygame.image.load("bomb.png")
+        icon = pygame.image.load("images/bomb.png")
         pygame.display.set_icon(icon)
 
         #objects2D - IMAGES
-        self.stone = pygame.image.load("stone.png")
-        self.flag = pygame.image.load("flag.png")
-        self.not_flag = pygame.image.load("not_flag.png")
-        self.num_1 = pygame.image.load("1.png")
-        self.num_2 = pygame.image.load("2.png")
-        self.num_3 = pygame.image.load("3.png")
-        self.num_4 = pygame.image.load("4.png")
-        self.num_5 = pygame.image.load("5.png")
-        self.num_6 = pygame.image.load("6.png")
-        self.num_7 = pygame.image.load("7.png")
-        self.bomb = pygame.image.load("bomb.png")
-        self.bomb_exp = pygame.image.load("bomb_exp.png")
-        self.nothing = pygame.image.load("nothing.png")
-        self.smiley = pygame.image.load("smiley.png")
-        self.lost_smiley = pygame.image.load("lost.png")
+        self.stone = pygame.image.load("images/stone.png")
+        self.flag = pygame.image.load("images/flag.png")
+        self.not_flag = pygame.image.load("images/not_flag.png")
+        self.num_1 = pygame.image.load("images/1.png")
+        self.num_2 = pygame.image.load("images/2.png")
+        self.num_3 = pygame.image.load("images/3.png")
+        self.num_4 = pygame.image.load("images/4.png")
+        self.num_5 = pygame.image.load("images/5.png")
+        self.num_6 = pygame.image.load("images/6.png")
+        self.num_7 = pygame.image.load("images/7.png")
+        self.bomb = pygame.image.load("images/bomb.png")
+        self.bomb_exp = pygame.image.load("images/bomb_exp.png")
+        self.nothing = pygame.image.load("images/nothing.png")
+        self.smiley = pygame.image.load("images/smiley.png")
+        self.lost_smiley = pygame.image.load("images/lost.png")
 
         self.size_imgs = (30, 30)
         self.stone = pygame.transform.scale(self.stone, self.size_imgs)
@@ -164,7 +164,6 @@ class minesweeperGame():
                     x, y = event.pos
 
                     if event.button == 1 and not self.end_won and not self.end_lost:
-                        #print("links")
                         self.collision_detection_with_objects(x, y, "left")
 
                     elif event.button == 3 and not self.end_won and not self.end_lost:
@@ -232,13 +231,6 @@ class minesweeperGame():
             for index, object in enumerate(self.objects):
                 if object.y_pos < y and object.y_pos_2 > y and object.x_pos < x and object.x_pos_2 > x:
                     if object.bomb:
-                        # if self.first_move:
-                        #     print("would have lost")
-                        #     self.__init__()
-                        #     self.collision_detection_with_objects(x, y, mouse_click)
-                        #     self.first_move = False
-                        #
-                        # else:
                         object.hidden = False
                         object.pic = self.bomb_exp
                         self.you_lost()
@@ -256,7 +248,6 @@ class minesweeperGame():
                     else:
                         object.flag = True
 
-                    print(object.flag)
 
     def check_if_nothing(self, object, index):
         if object.object_name == "nothing":
