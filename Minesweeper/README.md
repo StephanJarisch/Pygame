@@ -1,7 +1,7 @@
 ### Minesweeper Game in Python
 
 <br />
-<img flaot="left" align="left" alt="Picture of Minesweeper" width="150px" src="images/minesweeper.png" />
+<img float="left" align="left" alt="Picture of Minesweeper" width="150px" src="images/minesweeper.png" />
 
 <br />
 
