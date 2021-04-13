@@ -1,1 +1,6 @@
 # Collection of Games 
+
+1. Game is Minesweeper (Python)
+
+<img src="Minesweeper/images/minesweeper.png" alt="" width="200" />
+
