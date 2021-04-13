@@ -1,6 +1,6 @@
 # Minesweeper Game in Python
 
-![Minesweeper](images/minesweeper.png)
+<img src="images/minesweeper.png" width="100" alt=""/>
 
 A Single Player Game that objective it is to clear a rectangular board of hidden mines. Numbers on the revealed stones correlate to the number of hidden bombs around that stone. With logic and sometimes a bit of luck you should be able to flag all bombs (right click).
 
